@@ -12,3 +12,4 @@ function getArea(sides) {
 	}
 }
 
+module.exports = getArea;
