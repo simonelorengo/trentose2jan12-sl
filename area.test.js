@@ -40,15 +40,23 @@ test('Non-integer value for sides[1]', () => {
   expect(getArea([10, 'a'])).toBe(-1);
 });
 
-test('Passing parameters as two values instead of an array', () => {
+test('Float value for sides[0]', () => {
+  expect(getArea([1.2, 10])).toBe(-1);
+});
+
+test('Float value for sides[1]', () => {
+  expect(getArea([10, 1.2])).toBe(-1);
+});
+
+test('Parameters as two values instead of an array', () => {
   expect(getArea((3, 10))).toBe(-1);
 });
 
-test('Passing less array values than expected', () => {
+test('Less array values than expected', () => {
   expect(getArea([10])).toBe(-1);
 });
 
-test('Passing more array values than expected', () => {
+test('More array values than expected', () => {
   expect(getArea([10, 3, 5])).toBe(-1);
 });
 
